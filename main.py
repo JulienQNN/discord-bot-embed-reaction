@@ -73,7 +73,10 @@ class MyClient(discord.Client):
                     
         # check if there is atleast 5 vouchers in the vouchers.json file
         if VoucherFileCheker(user, view) == 2:
-            embed.add_field(name="NO MORE VOUCHERS TITLE !", value=DESCRIPTION_EMPTY_FILE, inline=True)
+            # the empty voucher embed model using parameters, u need to re init it to prevent sending again the last vouchers
+            embed=discord.Embed(title="NO MORE VOUCHERS TITLE !", description=DESCRIPTION_EMPTY_FILE, timestamp=datetime.now(timezone.utc), colour=COLOUR) 
+            embed.set_footer(text=FOOTER_DESCRIPTION, icon_url=AVATAR_FOOTER_URL)
+            embed.set_thumbnail(url=THUMBNAIL)
             await msg.remove_reaction(payload.emoji.name, user) 
             await user.send(embed=embed, view=view)        
 
