@@ -1,3 +1,5 @@
+SOON
+
 Python BOT giving promocode when a user make specific reaction on a specific message.
 
 $ git clone https://github.com/Rapptz/discord.py
