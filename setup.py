@@ -1,6 +1,4 @@
-from __future__ import print_function
 import discord
-from discord.ext import commands
 import os
 from helpers import *
 from dotenv import load_dotenv
