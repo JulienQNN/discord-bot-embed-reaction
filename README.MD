@@ -25,7 +25,7 @@ This repository is a Python project based on <a href="https://github.com/Rapptz/
 ### Requirements
 
 - <a href="https://www.python.org/downloads/">Python 3.8</a> or higher, to use Python !
-- <a href="https://github.com/Rapptz/discord.py">Discord.py 2.0</a> :warning: if you already have an old discord.py version (like the `1.7.3`) you need to uninstall it first `pip uninstall discord`
+- <a href="https://github.com/Rapptz/discord.py">Discord.py 2.0</a> :warning: if you already have an old discord.py version (like the `1.7.3` version) you need to uninstall it first with : `pip uninstall discord`
 
 <a>Install the Discord.py 2.0 library :</a>
 
@@ -92,7 +92,7 @@ If everything worked correctly, the bot should react and send a message to users
 
 <div align="center">
 <img width="357" height="255" src="https://s8.gifyu.com/images/22e0e195205d81752.gif" alt="22e0e195205d81752.gif" border="0" /></img>
-<img width="357" height="255" src="https://i.ibb.co/Sssr0P7/Capture-d-cran-2022-05-10-115335.png" alt="22e0e195205d81752.gif" border="0" /></img>
+<img width="357" height="255" src="https://i.ibb.co/Sssr0P7/Capture-d-cran-2022-05-10-115335.png" border="0" /></img>
 </div>
 
 ## License
