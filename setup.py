@@ -12,13 +12,13 @@ load_dotenv()
 class MyClient(discord.Client):
     async def on_ready(self):
         channel = self.get_channel(CHANNEL_ID)
-        embed=discord.Embed(title=TITLE, timestamp=datetime.now(timezone.utc), description=DESCRIPTION, url=URL, colour=COLOUR)
-        embed.set_thumbnail(url=THUMBNAIL)
-        embed.set_footer(text=FOOTER_DESCRIPTION,icon_url=AVATAR_FOOTER_URL)
+        embed=discord.Embed(title=TITLE, timestamp=datetime.now(timezone.utc), description=DESCRIPTION_SETUP, url=URL_SETUP, colour=COLOUR_SETUP)
+        embed.set_thumbnail(url=THUMBNAIL_SETUP)
+        embed.set_footer(text=FOOTER_DESCRIPTION_SETUP,icon_url=AVATAR_FOOTER_URL_SETUP)
         message = await channel.send(embed=embed) 
-        await message.add_reaction(TICKET)
-        await message.add_reaction(TICKET_TRIPLE)
-        await message.add_reaction(TICKET_QUINTUPLE)
+        await message.add_reaction(REACTION_1)
+        await message.add_reaction(REACTION_2)
+        await message.add_reaction(REACTION_3)
 
 # The CHANNEL_ID where the message embed will be sent
 CHANNEL_ID = int(os.getenv("CHANNEL_ID"))

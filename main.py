@@ -31,7 +31,7 @@ class MyClient(discord.Client):
         msg = await client.get_channel(pld_channId).fetch_message(pld_messId)
         
         # the discord button on all embeds sent in private message by the bot to users
-        view=Buttons().add_item(discord.ui.Button(label="YOUR LINK TITLE",style=discord.ButtonStyle.link,url=URL, emoji=BUTTON_LINK_EMOJI))
+        view=Buttons().add_item(discord.ui.Button(label=BUTTON_TITLE,style=discord.ButtonStyle.link,url=URL, emoji=BUTTON_LINK_EMOJI))
         
         # the user roles to use the second and third reaction of the embed
         role1 = discord.utils.find(lambda r: r.name == ROLE1, userRoles)
@@ -45,28 +45,28 @@ class MyClient(discord.Client):
         # check if the channel_id of the payload reaction added is the same that u choosed in your "helpers.py" file and there is stil vouchers in the vouchers.json file
         if pld_messId == client.message_or_embed_id and VoucherFileCheker(user, view) == 1:       
             
-                    # check if the reaction emoji added is the same as your TICKET emoji added in your "helpers.py" file
-                    if  emoji == TICKET:
-                        await msg.remove_reaction(TICKET, user)          
-                        embed.add_field(name="YOUR FIELD TITLE", value=VoucherPicker(1), inline=True)
+                    # check if the reaction emoji added is the same as your REACTION_1 emoji added in your "helpers.py" file
+                    if  emoji == REACTION_1:
+                        await msg.remove_reaction(REACTION_1, user)          
+                        embed.add_field(name=TITLE, value=VoucherPicker(1), inline=True)
                         
-                    # check if the reaction emoji added is the same as your TICKET_TRIPLE emoji added in your "helpers.py" file
-                    if emoji == TICKET_TRIPLE:
-                        await msg.remove_reaction(TICKET_TRIPLE, user)
+                    # check if the reaction emoji added is the same as your REACTION_2 emoji added in your "helpers.py" file
+                    if emoji == REACTION_2:
+                        await msg.remove_reaction(REACTION_2, user)
                         
                         # check if one of the roles of the user who added the reaction is the same as ROLE1 that u choosed in your "helpers.py" file, if not it will send a warning
                         if role1 in userRoles:
-                            embed.add_field(name="YOUR FIELD TITLE", value=VoucherPicker(3), inline=True)
+                            embed.add_field(name=TITLE, value=VoucherPicker(3), inline=True)
                         else:
                             embed.add_field(name=WARNING1, value=WARNING1, inline=True)
                             
-                    # check if the reaction emoji added is the same as your TICKET_QUINTUPLE emoji added in your "helpers.py" file
-                    if emoji == TICKET_QUINTUPLE:
-                        await msg.remove_reaction(TICKET_QUINTUPLE, user)
+                    # check if the reaction emoji added is the same as your REACTION_3 emoji added in your "helpers.py" file
+                    if emoji == REACTION_3:
+                        await msg.remove_reaction(REACTION_3, user)
                         
                         # check if one of the roles of the user who added the reaction is the same as ROLE2 that u choosed in your "helpers.py" file, if not it will send a warning
                         if role2 in userRoles:
-                            embed.add_field(name="YOUR FIELD TITLE", value=VoucherPicker(5), inline=True)
+                            embed.add_field(name=TITLE, value=VoucherPicker(5), inline=True)
                         else:
                             embed.add_field(name=WARNING2, value=WARNING2, inline=True) 
                     await user.send(embed=embed, view=view)
@@ -74,7 +74,7 @@ class MyClient(discord.Client):
         # check if there is atleast 5 vouchers in the vouchers.json file
         if VoucherFileCheker(user, view) == 2:
             # the empty voucher embed model using parameters, u need to re init it to prevent sending again the last vouchers
-            embed=discord.Embed(title="NO MORE VOUCHERS TITLE !", description=DESCRIPTION_EMPTY_FILE, timestamp=datetime.now(timezone.utc), colour=COLOUR) 
+            embed=discord.Embed(title=TITLE_EMPTY_FILE, description=DESCRIPTION_EMPTY_FILE, timestamp=datetime.now(timezone.utc), colour=COLOUR) 
             embed.set_footer(text=FOOTER_DESCRIPTION, icon_url=AVATAR_FOOTER_URL)
             embed.set_thumbnail(url=THUMBNAIL)
             await msg.remove_reaction(payload.emoji.name, user) 
