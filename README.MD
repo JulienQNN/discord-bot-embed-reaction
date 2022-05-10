@@ -72,8 +72,8 @@ $ python3 setup.py
 If everything worked correctly you should receive a message in the channel you have chosen like on the GIF below !
 
 <div align="center">
-<img width="420" height="300" src="https://s8.gifyu.com/images/discord-bot-embed-reaction.gif" alt="discord-bot-embed-reaction.gif" border="0" />
-<img width="420" height="300" src="https://i.ibb.co/ws5jn5w/Capture-d-cran-2022-05-10-113216.png" border="0" />
+<img width="357" height="255" src="https://s8.gifyu.com/images/discord-bot-embed-reaction.gif" alt="discord-bot-embed-reaction.gif" border="0" />
+<img width="357" height="255" src="https://i.ibb.co/ws5jn5w/Capture-d-cran-2022-05-10-113216.png" border="0" />
 </div>
 
 ### Fill again `.env` file
@@ -91,7 +91,8 @@ $ python3 main.py
 If everything worked correctly, the bot should react and send a message to users that adds a reaction to the message you defined earlier. Don't forget to populate your `vouchers.json` file with a list of vouchers or any other data ! The GIF below show you what this code does with the basic parameters, customize them as you wish !
 
 <div align="center">
-<img width="420" height="300" src="https://s8.gifyu.com/images/22e0e195205d81752.gif" alt="22e0e195205d81752.gif" border="0" /></img> <img width="420" height="300" src="https://i.ibb.co/Sssr0P7/Capture-d-cran-2022-05-10-115335.png" alt="22e0e195205d81752.gif" border="0" /></img>
+<img width="357" height="255" src="https://s8.gifyu.com/images/22e0e195205d81752.gif" alt="22e0e195205d81752.gif" border="0" /></img>
+<img width="357" height="255" src="https://i.ibb.co/Sssr0P7/Capture-d-cran-2022-05-10-115335.png" alt="22e0e195205d81752.gif" border="0" /></img>
 </div>
 
 ## License
