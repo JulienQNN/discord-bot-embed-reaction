@@ -29,4 +29,4 @@ ROLE1 = "your rank 1 here" # Your first rank name
 ROLE2 = "Yyour rank 2 here" # Your second rank name
 
 # --------------------- OTHERS SETTINGS ---------------------
-VOUCHER = "vouchers.json" # Your json voucher file
+VOUCHER = "vouchers.json" # Your json voucher file name
